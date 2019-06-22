@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * https://examples.javacodegeeks.com/core-java/util/concurrent/atomic/atomicinteger/java-atomicinteger-example/
  */
 
-public class runnable implements Runnable {
+public class runnableEx implements Runnable {
     private static AtomicInteger at = new AtomicInteger(0);
 
     @Override

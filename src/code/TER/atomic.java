@@ -15,9 +15,9 @@ public class atomic {
 
 
     public void playPingPong() {
-        Thread t1 = new Thread(new runnable());
-        Thread t2 = new Thread(new runnable());
-        Thread t3 = new Thread(new runnable());
+        Thread t1 = new Thread(new runnableEx());
+        Thread t2 = new Thread(new runnableEx());
+        Thread t3 = new Thread(new runnableEx());
 
         new Thread(() -> {
             for (int lv = val; lv < MAX; )
