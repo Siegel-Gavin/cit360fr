@@ -15,14 +15,14 @@ public class atomic {
 
 
     public void newCode() {
-        Thread t1 = new Thread(new runnableEx());
-        Thread t2 = new Thread(new runnableEx());
-        Thread t3 = new Thread(new runnableEx());
+        Thread n1 = new Thread(new runnableEx());
+        Thread n2 = new Thread(new runnableEx());
+        Thread n3 = new Thread(new runnableEx());
 
         new Thread(() -> {
             for (int lv = val; lv < MAX; )
                 if(lv != val) {
-                    System.out.println("pong(" + val + ")");
+                    System.out.println("send(" + val + ")");
                     lv = val;
                 }
         }).start();
@@ -30,7 +30,7 @@ public class atomic {
         new Thread(() -> {
             for (int lv = val; lv < MAX; ) {
                 val = ++lv;
-                System.out.println("ping(" + lv + ")");
+                System.out.println("recieve(" + lv + ")");
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException e) {
@@ -43,9 +43,9 @@ public class atomic {
 
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 
-        executorService.execute(t1::start);
-        executorService.execute(t2::start);
-        executorService.execute(t3::start);
+        executorService.execute(n1::start);
+        executorService.execute(n2::start);
+        executorService.execute(n3::start);
 
 
 
