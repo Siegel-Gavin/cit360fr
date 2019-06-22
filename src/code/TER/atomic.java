@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * this example is based off of the tutorial found here
+ * code based off of the tutorial
  * https://www.youtube.com/watch?v=IQSbIOKhC4g
  */
 
@@ -14,7 +14,7 @@ public class atomic {
     private int MAX = 30;
 
 
-    public void playPingPong() {
+    public void newCode() {
         Thread t1 = new Thread(new runnableEx());
         Thread t2 = new Thread(new runnableEx());
         Thread t3 = new Thread(new runnableEx());

@@ -1,8 +1,9 @@
 package code.TER;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * This code is based off of the tutorial found here
+ * code based off of the tutorial
  * https://examples.javacodegeeks.com/core-java/util/concurrent/atomic/atomicinteger/java-atomicinteger-example/
  */
 
