@@ -12,8 +12,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.*;
 
-//This program demonstrates the use of HTTP Url connections. It also demonstrates JSON Objects and how they interact with Java Objects
-
 public class JSON {
 
     public void main() {
@@ -47,7 +45,7 @@ public class JSON {
         System.out.println("Bad Request, try again.");
     }
 
-    //This function takes an object and converts it to a json object using Google's Gson
+    //This function takes an object and converts it to a json object
 
     private JsonObject objectToJSON() {
         Post post = new Post();
@@ -63,11 +61,11 @@ public class JSON {
     //This sends a post request with Json and displays the response
 
     private void postRequest() {
-        // This part of the code is largely based off of the Mkyong.com tutorial.
+        // This part of the code is based off the Mkyong.com tutorial.
         // https://www.mkyong.com/java/how-to-send-http-request-getpost-in-java/
         String url = "https://jsonplaceholder.typicode.com/posts";
 
-        //I wrap this code in a try catch so that if we get a bad request it doesn't crash the system
+        //I wrap thr code in a try catch so a bad request doesn't crash the system
         try{
             //Define the url and start the connection
             URL obj = new URL(url);
@@ -107,8 +105,6 @@ public class JSON {
     }
     // This function sends a get request and then sends the json array to be converted into an array list of objects
     private void getRequest() {
-        // This part of the code is largely based off of the Mkyong.com tutorial.
-        // https://www.mkyong.com/java/how-to-send-http-request-getpost-in-java/
 
         final String USER_AGENT = "Mozilla/5.0";
 
