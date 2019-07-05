@@ -1,4 +1,4 @@
-package code.JSON;
+package code.JSONandURLHTTP;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
