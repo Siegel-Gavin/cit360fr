@@ -1,31 +1,35 @@
 package code.MVC;
 
-public class CustomerController {
-    private Customer model;
-    private CustomerView view;
+import sun.jvm.hotspot.memory.Generation;
+import javax.persistence.*;
 
-        public CustomerController(Customer model, CustomerView view){
-            this.model = model;
-            this.view = view;
-        }
+public class Customer {
 
-        public void setCustomerName(String name){
-            model.setName(name);
-        }
+    private Integer id;
 
-        public String getCustomereName(){
-            return model.getName();
-        }
+    private String firstName;
+    private String lastName;
+    public String getFirstName() {
+        return firstName;
+    }
 
-        public void setaltID(String altID){
-            model.setaltID(altID);
-        }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-        public String getaltID(){
-            return model.getaltID();
-        }
+    public String getLastName() {
+        return lastName;
+    }
 
-        public void updateView(){
-            view.printCustomerDetails(model.getName(), model.getaltID());
-        }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }

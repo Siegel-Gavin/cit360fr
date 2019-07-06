@@ -1,4 +1,4 @@
-package code;
+package code.JSONandURLHTTP;
 
 public class post {
     Integer userId;
