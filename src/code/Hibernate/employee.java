@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 // This model matches the database employee table which allows hibernate to map it to the database
 
-public class employee{
+public class Employee{
 
     private Integer id;
     private String firstName;

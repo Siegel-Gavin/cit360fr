@@ -14,17 +14,17 @@ public class hibEmployee {
         this.factory = factory;
     }
 
-    public Integer addPerson(String fname, String lname){
+    public Integer addEmployee(String fname, String lname){
         Session session = factory.openSession();
         Transaction tx = null;
-        Integer personID = null;
+        Integer employeeID = null;
 
         try {
             tx = session.beginTransaction();
-            Person person = new Person();
-            person.setFirstName(fname);
-            person.setLastName(lname);
-            personID = (Integer) session.save(person);
+            Employee employee = new Employee();
+            employee.setFirstName(fname);
+            employee.setLastName(lname);
+            employeeID = (Integer) session.save(employee);
             tx.commit();
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
@@ -32,6 +32,6 @@ public class hibEmployee {
         } finally {
             session.close();
         }
-        return personID;
+        return employeeID;
     }
 }
