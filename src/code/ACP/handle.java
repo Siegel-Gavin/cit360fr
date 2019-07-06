@@ -1,7 +1,7 @@
 
 import java.util.HashMap;
 
-public interface handle {
+public interface Handler {
     public void handleIt(State state);
 
 }
