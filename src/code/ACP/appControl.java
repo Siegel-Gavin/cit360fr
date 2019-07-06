@@ -1,4 +1,6 @@
-pimport java.util.HashMap;
+package code.ACP;
+
+import java.util.HashMap;
 
 public class appControl {
     //This will map a command with all of the controllers implementing the handler interface
